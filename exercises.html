@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exercises: try your role</title>
+<meta name="description" content="Spot the red flag, make a decision and answer a knowledge check for each of the six roles, and see where you stand on Detect, Verify and Contain.">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="exercises">
+<header class="top"><div class="wrap"><a class="brand" href="index.html"><b>RBCF</b><span>Role-Based Competency Framework</span></a><nav class="nav" aria-label="Main"><a href="index.html" data-page="home">Home</a><a href="overview.html" data-page="overview">Background</a><a href="roles.html" data-page="roles">Six roles</a><a href="exercises.html" data-page="exercises">Exercises</a><a href="try.html" data-page="try">What&rsquo;s in the box</a><a href="impact.html" data-page="impact">Impact</a></nav></div></header>
+<section class="pagehero"><div class="wrap"><div class="eyebrow">Exercises</div><h1>Try the exercises, role by role</h1><p>Choose your role. Each role has two Spot the Red Flag emails, two decision games and two knowledge checks. The panel below shows where you stand on Detect, Verify and Contain.</p></div></section>
+
+<section class="block"><div class="wrap">
+<div class="dash"><h3>Where you stand</h3>
+<div class="st-top" id="dash-top"></div><div class="st-phs" id="dash-phases"></div><p class="st-next" id="dash-next"></p><div id="dash-rows"></div>
+<details class="st-how"><summary>How the score works</summary><p>Red-flag rounds: red flags found out of the red flags in the email. Decision games: attempt stopped scores 1, partly right 0.5, fraud succeeded 0. Knowledge checks: correct scores 1. The practice score is the average of the activities you have done. It is practice feedback, not a test.</p></details>
+<p class="muted" style="font-size:14px;margin:12px 0 0">Saved in this browser only. Nothing is sent anywhere. <button type="button" class="mini" id="dash-reset">Reset my progress</button></p></div>
+<div class="eyebrow">Choose a role</div><h2>Which role are you?</h2>
+<div class="rolepick" id="rolepick"></div>
+<p class="muted" id="ex-hint">Select a role to start.</p>
+<div id="ex-body" hidden>
+<h2 id="ex-role" style="margin-bottom:22px"></h2><div class="done" id="ex-done" hidden></div>
+<div class="panel"><div class="eyebrow" style="color:#B9A7E8">Game 1 &middot; Detect</div><h3>Spot the Red Flag: <span id="spot-name"></span></h3><div class="subtabs" id="spot-tabs"></div><div id="spot-mount"></div></div>
+<div class="panel"><div class="eyebrow" style="color:#B9A7E8">Game 2 &middot; Verify</div><h3>Decision game</h3><div class="subtabs" id="game-tabs"></div><div id="game-mount"></div></div>
+<div class="panel"><div class="eyebrow" style="color:#B9A7E8">Game 3 &middot; Knowledge check</div><h3>Check what you know</h3><div class="subtabs" id="kc-tabs"></div><div id="kc-mount"></div></div>
+</div></div></section>
+<footer class="slim"><div class="wrap">Part of a University of Queensland capstone project (CYBR7901 and CYBR7902). Sources and contact details are on the <a href="index.html#sources">home page</a>.</div></footer>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -34,7 +34,7 @@ section.block{padding:76px 0}section.paper{background:var(--paper)}section.dark{
 .ring{width:104px;height:104px;flex:0 0 auto;transform:rotate(-90deg)}.ring .bg{fill:none;stroke:var(--soft);stroke-width:12}.ring .fg{fill:none;stroke:var(--primary);stroke-width:12;stroke-linecap:round;transition:stroke-dashoffset 1.8s cubic-bezier(.2,.7,.2,1)}
 .ring text{transform:rotate(90deg);transform-origin:60px 60px;font-family:var(--serif);font-size:26px;font-weight:600;fill:var(--deep);text-anchor:middle;dominant-baseline:central}
 .dots{display:grid;grid-template-columns:repeat(31,1fr);gap:4px;margin:12px 0 4px}.dots i{aspect-ratio:1;border-radius:50%;background:var(--soft);transition:background .3s,transform .3s}.dots i.on{background:var(--mid);transform:scale(1)}
-.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
 .tile{display:block;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;transition:transform .2s,box-shadow .2s}.tile:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(43,26,94,.16)}
 .tile h3{color:var(--deep);margin-bottom:6px}.tile p{margin:0 0 14px;color:#3A3350;font-size:16px}.tile span{font-weight:700;color:var(--primary)}
 /* footer */
@@ -238,3 +238,18 @@ table.tx td b{color:var(--ink);font-weight:600}table.tx .num{width:56px}
 table.tx tbody tr{transition:opacity .2s}table.tx tbody tr.dim{opacity:.28}
 .txcount{font-size:15px;color:var(--muted);margin:12px 0 0}
 @media (max-width:700px){table.tx thead{display:none}table.tx tbody tr{display:block;padding:12px 14px;border-bottom:1px solid var(--line)}table.tx td{display:block;border:0;padding:3px 0}table.tx td::before{content:attr(data-l);display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mid);font-weight:700}table.tx .num{width:auto}table.tx .num::before{display:none}}
+/* Exercises: where you stand, and knowledge-check answers */
+.st-top{display:flex;flex-wrap:wrap;gap:12px 34px;align-items:center;margin:6px 0 18px}
+.st-big b{font:700 46px/1 var(--serif);color:var(--primary);display:block}
+.st-big span{font-size:14px;color:var(--muted)}
+.st-lvl{display:inline-block;padding:6px 16px;border-radius:20px;background:var(--soft);color:var(--deep);font-weight:700;font-size:15px}
+.st-phs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 26px;margin:0 0 16px}
+.st-phn{font-weight:700;margin-bottom:6px;color:var(--ink)}.st-phn small{font-weight:400;color:var(--muted);margin-left:6px}
+.st-ph .dbar{margin-bottom:6px}.st-phv{font-size:14px;color:var(--muted)}
+.dbar i{display:block;height:100%;background:var(--primary);border-radius:5px;transition:width .4s}
+.st-next{background:var(--paper);border-radius:10px;padding:12px 16px;margin:0 0 14px}
+.st-how{margin:10px 0 0;font-size:14px;color:var(--muted)}.st-how summary{cursor:pointer;font-weight:600;color:var(--primary)}
+.drow .dn{white-space:nowrap;margin-left:auto;font-weight:700}
+.opt.right{background:#0F5132;border-color:#5DCAA5}.opt.wrong{background:#6B1D1D;border-color:#F09595}
+.opt b{display:inline-block;margin-right:8px}
+@media (prefers-reduced-motion:reduce){.dbar i{transition:none}}

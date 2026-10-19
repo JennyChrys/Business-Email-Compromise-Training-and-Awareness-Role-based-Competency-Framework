@@ -13,13 +13,14 @@ It is a static site (HTML, CSS and plain JavaScript). There is no build step, no
 | `index.html` | Home: the introduction film, role picker, options, sources, capstone and contact details |
 | `overview.html` | The Background page (shown in the menu as "Background"): the ten BEC attack patterns with a role filter, and the Detect, Verify, Contain pipeline |
 | `roles.html` | Why six roles, a clickable diagram and comparison, and links to the six modules |
+| `exercises.html` | Exercises for all six roles. Each role has two Spot the Red Flag emails, two decision games and two knowledge checks. A "Where you stand" panel shows a practice score, a bar each for Detect, Verify and Contain, and a next step. Results are saved in the visitor's own browser only |
 | `try.html` | "What's in the box": a three-minute taster from the HR and Payroll module (scenario video, spot the red flag, a decision) |
 | `impact.html` | How the training helps in your work (role flip cards) |
 
 ## Project structure
 
 ```
-index.html  overview.html  roles.html  try.html  impact.html
+index.html  overview.html  roles.html  exercises.html  try.html  impact.html
 css/styles.css      all styling (colours are the variables at the top)
 js/data.js          ALL content and configuration (edit this to change anything)
 js/app.js           behaviour, commented section by section
@@ -38,8 +39,9 @@ Every page loads `js/data.js`, which defines one object, `window.RBCF`, then `js
 | `links` | The six module files in `modules/`, keyed by role: `ap`, `adm`, `cs`, `ex`, `pay`, `it` |
 | `contacts` | Supervisors and student researcher shown in the home page footer. Leave `email` empty to show no email line |
 | `roles` | Name, focus, goal, lure and control for each role |
-| `spots` | Only the HR and Payroll email is shown now. For each role, two emails. Each email is a list of lines made of segments. A segment is `[text]`, or `[text, "f1"]` for a red flag, or `[text, "d1"]` for an ordinary phrase |
-| `games` | Only the HR and Payroll game is shown now. For each role, two decision games with options, outcomes (`S` stopped, `P` partly right, `F` fraud succeeded) and a debrief |
+| `spots` | For each role, two emails. Each email is a list of lines made of segments. A segment is `[text]`, or `[text, "f1"]` for a red flag, or `[text, "d1"]` for an ordinary phrase |
+| `games` | For each role, two decision games with options, outcomes (`S` stopped, `P` partly right, `F` fraud succeeded) and a debrief |
+| `kcs` | For each role, two knowledge checks: `phase` (Verify or Contain), `q` (the question), `opts` (three options), `ans` (the index of the correct option, 0 to 2) and `why` (the explanation). Copied from the modules |
 | `phases` | Background page: the Detect, Verify, Contain pipeline |
 | `vectors`, `flow`, `cialdini`, `clickfix` | Not used by the site now. They hold the content of sections that were removed because the film and the modules already cover it. Safe to delete, or to reuse if you want those sections back. |
 
@@ -67,6 +69,10 @@ The six modules are PowerPoint decks in the `modules/` folder, so the site does 
 | Customer Service | `modules/BEC_Training_CustomerService.pptx` |
 | IT Staff | `modules/BEC_Training_IT.pptx` |
 | Administrative | `modules/BEC_Training_Administrative.pptx` |
+
+Each module has two buttons. **Download the module** saves the file. **Open in PowerPoint** launches the desktop app straight from the page, using Microsoft's Office URI scheme (`ms-powerpoint:ofv|u|` followed by the address of the file). It needs PowerPoint installed and the site to be online, and the file opens read-only. If it opens in Protected View, click Enable Editing before pressing F5.
+
+A third button, **Open online (OneDrive)**, opens the same module from OneDrive in the browser. Those links are in the `onedrive` key of `js/data.js`, one per role. To change one, replace the link there. If a link stops working, check that the file is still shared as "Anyone with the link can view".
 
 To replace a module, upload a new file with the same name to `modules/`. The links are in the `links` key of `js/data.js`. Each file is 10 to 14 MB, well under GitHub's 100 MB limit.
 
@@ -112,7 +118,6 @@ The introduction film, the modules and the website all repeated the same teachin
 
 - The animated numbers block on the Home page (the film shows the numbers; the sources are listed in the footer of the Home page).
 - The animated attack flow, the three ways in (flip cards), the Cialdini diagram, the ClickFix step-through, the definition and the numbers on the Overview page. All of this is taught in each module or shown in the film.
-- The whole Exercises page, with its progress dashboard. The "What's in the box" page keeps one sample.
 - The IT scenario video from the site, because it is shown in the capstone presentation instead.
 
 ## Credits and licences
@@ -122,3 +127,4 @@ The introduction film, the modules and the website all repeated the same teachin
 - **Fonts.** The site loads its fonts from Google Fonts (fonts.googleapis.com). Nothing else is loaded from outside this repository.
 - **Sources.** The sources behind the facts and figures are listed in the footer of the Home page.
 - **Licence.** No licence has been chosen yet. Until one is added, the material may be viewed but not reused or redistributed without permission. To ask about reuse, contact the author through the details on the Home page.
+- **Privacy.** The Exercises page keeps your results in your own browser (localStorage) so you can see where you stand. Nothing is sent anywhere, there is no tracking, and "Reset my progress" clears it. The practice score is feedback for the learner. It is not a validated test.

@@ -1944,5 +1944,159 @@ window.RBCF = {
     "Two knowledge-check questions with feedback."
    ]
   }
- }
+ },
+  "onedrive": {
+    "ex": "https://1drv.ms/p/c/914bde2a036729f9/IQDJZ8Uotw-zSpdpWT1nXX-wAUBHLjBloWE0QnDREvxjhzE?e=qTPeD0",
+    "ap": "https://1drv.ms/p/c/914bde2a036729f9/IQAoYD4oMpVjQZKfuBa4kxIyAYdj9d9MpDYh4hrsquSpXvY?e=eNgFtQ",
+    "pay": "https://1drv.ms/p/c/914bde2a036729f9/IQBPXAKsKJwLRY5_LGgm0b9qAY0Yh9cJI08w6qXPkXIvi_E?e=oujUlK",
+    "cs": "https://1drv.ms/p/c/914bde2a036729f9/IQBYpqOG31xATaV_oTIVRI8IAZtx7hDUp4J__bdNzWdPS-g?e=o8twk9",
+    "it": "https://1drv.ms/p/c/914bde2a036729f9/IQDNYV955TW1SpjGORaUs3yTAcBm7xPXAm6yuejMcgGHRvg?e=pJWegR",
+    "adm": "https://1drv.ms/p/c/914bde2a036729f9/IQB8f-J8_hQWT4bSCztOgFEcAU8lajPJ9fwe7-998fKIJBM?e=DWOwoH"
+  },
+  "kcs": {
+    "pay": [
+      {
+        "phase": "Contain",
+        "q": "It is Saturday. You now suspect Friday's bank-detail change was fake, and the pay has already gone out. What do you do first?",
+        "opts": [
+          "Email the employee to confirm her new details, then contact the bank on Monday",
+          "Call your bank's after-hours fraud line and ask them to recall the payment",
+          "Tell IT and your manager first, so that one person coordinates the response"
+        ],
+        "ans": 1,
+        "why": "Once money has moved, speed matters most. The bank is the only one who can try to recall it, so call first, then tell the real employee, IT and your manager."
+      },
+      {
+        "phase": "Contain",
+        "q": "An employee tapped a text link and typed in her pay details. Your manager says to keep it quiet to avoid panic. What do you do?",
+        "opts": [
+          "Warn staff, tell IT, and have her contact her bank and change passwords",
+          "Tell IT quietly and watch her accounts, so staff are not alarmed",
+          "Ask her to contact her bank, and leave the wider response to IT"
+        ],
+        "ans": 0,
+        "why": "Quiet fixes give attackers more time. Others may have received the same text, so warn staff and tell IT as well as protecting her accounts."
+      }
+    ],
+    "cs": [
+      {
+        "phase": "Contain",
+        "q": "A caller fails authentication twice, then says he will complain unless you update his email address now. What do you do?",
+        "opts": [
+          "Ask the security questions a third time, then update it if he answers correctly",
+          "Update it now, but flag the account and notify the old email address",
+          "Hold the change and offer a code to the registered device or a callback"
+        ],
+        "ans": 2,
+        "why": "Pressure is not proof. Offer a check an attacker cannot pass, because a flag or a notice after the change is too late if the account has already been taken."
+      },
+      {
+        "phase": "Contain",
+        "q": "Two hours ago you sent customer records to a regulator that now looks fake. What do you do first?",
+        "opts": [
+          "Recall the email and delete it from your sent items, to limit exposure",
+          "Tell your privacy lead now and record exactly what was sent",
+          "Call the number in the regulator's email to check it was genuine"
+        ],
+        "ans": 1,
+        "why": "Notification deadlines may already be running, and the sent email is evidence. Tell your privacy lead now, and never verify through contact details the sender supplied."
+      }
+    ],
+    "adm": [
+      {
+        "phase": "Contain",
+        "q": "You bought gift cards for an email from the CEO and sent the codes. Now you suspect it was fake. What do you do first?",
+        "opts": [
+          "Contact the gift card company at once, with the card numbers",
+          "Tell your manager and wait for instructions before doing anything else",
+          "Text the CEO on her mobile to check that she really asked"
+        ],
+        "ans": 0,
+        "why": "Gift card money can sometimes be frozen if the company is told fast. Call them first, then tell your manager and Security."
+      },
+      {
+        "phase": "Contain",
+        "q": "Your manager's email asks you to pay an invoice within the hour. She is travelling and her phone is off. What do you do?",
+        "opts": [
+          "Pay it now, because the invoice matches one you have paid before",
+          "Reply to the email, and pay if she answers within the hour",
+          "Hold the payment and ask the next approver through a known contact"
+        ],
+        "ans": 2,
+        "why": "A real address can be taken over, and a reply goes to whoever controls it. Hold the payment and reach someone with authority through a contact you already hold."
+      }
+    ],
+    "ap": [
+      {
+        "phase": "Contain",
+        "q": "You released a payment this morning to new bank details and now suspect they were fake. Who do you call first?",
+        "opts": [
+          "The vendor, on their known number, to ask whether the money arrived",
+          "Your manager and IT, so the response is coordinated from the start",
+          "Your bank, to ask them to stop or recall the payment"
+        ],
+        "ans": 2,
+        "why": "Once money has moved, speed matters most. Call the bank first, then your manager and IT."
+      },
+      {
+        "phase": "Contain",
+        "q": "The bank says the recall failed and the money has been withdrawn. What do you do now?",
+        "opts": [
+          "Ask the vendor to return the money, and report it only if they refuse",
+          "Report it to the cybercrime service, tell IT, and keep working with your bank",
+          "Record the loss for the audit, and let the bank close the case"
+        ],
+        "ans": 1,
+        "why": "A failed recall is not the end. Reporting can still help the bank and the police trace and freeze funds, and IT needs to know how the attacker got in."
+      }
+    ],
+    "it": [
+      {
+        "phase": "Contain",
+        "q": "A user's mailbox sent phishing emails. She says she reset her password an hour ago. Is that enough?",
+        "opts": [
+          "No: revoke sessions and tokens, then check mailbox rules and MFA devices",
+          "Yes: a new password locks the attacker out of the mailbox",
+          "Mostly: also turn on MFA and watch the account for a week"
+        ],
+        "ans": 0,
+        "why": "Attackers often keep access through sessions, tokens, mailbox rules and new MFA devices that a password reset does not remove. MFA alone does not close those doors."
+      },
+      {
+        "phase": "Contain",
+        "q": "A ticket asks you to reset a director's MFA. The director is on a flight and the CEO says it is urgent. What do you do?",
+        "opts": [
+          "Process it, because the ticket came through the approved queue",
+          "Confirm by a directory callback or the director's manager, then reset",
+          "Reply on the ticket and ask for the director's employee number"
+        ],
+        "ans": 1,
+        "why": "A ticket records a request. It does not prove who made it, and an employee number is something an attacker may already know. Confirm identity somewhere the request cannot reach."
+      }
+    ],
+    "ex": [
+      {
+        "phase": "Verify",
+        "q": "A new finance officer delays your own urgent transfer to run the callback. The deal is at risk. What do you do?",
+        "opts": [
+          "Thank her, let the callback finish, and say the delay was right",
+          "Tell her to skip it this once, and review the policy later",
+          "Ask her manager to coach her on balancing speed with process"
+        ],
+        "ans": 0,
+        "why": "A delay to verify is the protocol working. Thanking her makes it safe for staff to hold the line, even against you."
+      },
+      {
+        "phase": "Verify",
+        "q": "You are locked out of email before a board meeting. A text says to reply with the code just sent to restore access. What do you do?",
+        "opts": [
+          "Reply with the code, because the text came from IT's usual number",
+          "Forward the code to your assistant to sort out from the office",
+          "Share it with no one, and call IT on a saved number"
+        ],
+        "ans": 2,
+        "why": "Never share a one-time code with anyone who contacts you, and a number on a text can be faked. Check with IT on a number you already hold."
+      }
+    ]
+  }
 };
