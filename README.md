@@ -1,6 +1,6 @@
 # RBCF: Business Email Compromise Training and Awareness
 
-**Live site:** https://jennychrys.github.io/Business-Email-Compromise-Training-and-Awareness-Role-based-Competency-Framework/ (this address works once GitHub Pages is switched on for the repository).
+**Live site:** https://jennychrys.github.io/Business-Email-Compromise-Training-and-Awareness-Role-based-Competency-Framework/.
 
 An interactive, five-page website for the Role-Based BEC Competency Framework (RBCF), a University of Queensland capstone project (CYBR7901 and CYBR7902). It introduces business email compromise (BEC), shows how six roles are targeted, and lets people practise: spot the red flags in a realistic email, then make a decision in a phone-call or video-call scenario.
 
